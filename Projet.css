@@ -1,0 +1,397 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    text-decoration: none;
+
+}
+
+body {
+    font-family: 'open sans', sans-serif;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 5em;
+    position: fixed;
+    background-color: rgb(97, 165, 210);
+    color: white;
+}
+
+.logo {
+    padding: 2%;
+    font-weight: 400;
+    font-style: oblique;
+}
+
+
+
+.menu nav ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    gap: 3em;
+    margin-right: 30px;
+    list-style: none;
+}
+
+.menu nav ul li a {
+    color: yellow;
+}
+
+.menu nav ul li:hover {
+    background-color: rgb(192, 192, 31);
+    height: 1em;
+    width: 3.5em;
+    padding: 0.6em;
+    transition: 1s;
+}
+
+
+/* le debut du main  */
+
+.main {
+    margin-bottom: 60em;
+}
+
+.titre h1 {
+    padding-top: 4em;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    padding-bottom: 1em;
+    font-family: "Faster One", system-ui;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 2em;
+    margin-bottom: 5em;
+    border: 1em solid;
+}
+
+.contenu_pricipale {
+    height: 15em;
+    padding: 2.1em;
+    font-size: 22px;
+    line-height: 40px;
+    margin-bottom: 30px;
+    font-family: "Abril Fatface", serif;
+    font-style: oblique;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.contenu_pricipale h2 {
+    padding-bottom: 0.7em;
+    color: rgb(97, 165, 210);
+}
+
+
+.biographie {
+    grid-column: 2;
+}
+
+.presentation {
+    grid-column: 1;
+}
+
+.liste {
+    grid-column: 2;
+    margin-top: 20em;
+}
+
+.citation {
+    grid-column: 1;
+}
+
+
+/* the footer of page  */
+footer {
+    background-color: black;
+    color: white;
+    height: 25em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+
+}
+
+/* les liens du footer  */
+.liens {
+    float: right;
+    padding: 1.5em;
+    font-size: 1.2em;
+}
+
+.liens a img {
+    height: 3em;
+    width: 3em;
+    transition: 2s;
+    padding: 1.1em;
+    padding-bottom: 2em;
+}
+
+.liens a img:hover {
+    transform: scale(1.1);
+}
+
+
+/* le retour en haut */
+#retour {
+    position: fixed;
+    display: flex;
+    justify-content: end;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(97, 165, 210);
+    color: white;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* les qui dirige vers les autres page  */
+.lienspage {
+    line-height: 1em;
+    color: yellow;
+    margin-top: 20em;
+    margin-left: 10px;
+}
+
+.pied {
+    padding-top: 4em;
+    width: 50%;
+}
+
+.pied p {
+    margin-left: 4em;
+    font-size: 1.3em;
+    line-height: 2em;
+}
+
+.zone-defilement {
+    background: white;
+    width: 90%;
+    border-radius: 1em;
+    padding: 1.5em;
+    overflow: hidden;
+    margin-top: 20px;
+    color: blue;
+    margin-left: 2em;
+    margin-right: 20em;
+}
+
+.created {
+    display: inline-block;
+    white-space: nowrap;
+    animation: defilement 12s linear infinite;
+}
+
+.created span {
+    margin-right: 80%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@keyframes defilement {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+.zone-defilement:hover .created {
+    animation-play-state: paused;
+}
+
+
+/* la page des oeuvrages */
+.carte {
+    display: grid;
+    grid-template-columns: 25em 25em 25em;
+    grid-template-rows: 33em 33em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.carte .piece {
+    margin: 1em;
+    background-color: rgb(221, 235, 247);
+    border-radius: 2em;
+    transition: 1s;
+    border: 5px solid rgba(255, 255, 0, 0.619);
+}
+
+.piece img {
+    margin-left: 2em;
+    padding-top: 1em;
+    border-radius: 1em;
+    height: 20em;
+    width: 18em;
+}
+
+.piece:hover {
+    box-shadow: 0px 10px 20px rgb(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.piece h3 {
+    margin-top: 1em;
+    margin-left: 2em;
+    font-size: 1.2em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+}
+
+.piece p {
+    font-size: 1.1em;
+    font-style: italic;
+    text-align: center;
+    font-family: "Abril Fatface", serif;
+}
+
+
+.personnage {
+    padding: 5em;
+    margin-top: 4em;
+    margin-bottom: 3em;
+    font-size: 1.3em;
+    font-family: "Abril Fatface", serif;
+    font-style: italic;
+    line-height: 2em;
+    background: linear-gradient(to right, rgb(97, 165, 210), rgb(216, 213, 213), rgb(97, 165, 210));
+    height: 9em;
+}
+
+
+/* la page contact et c'est élément*/
+.introduction {
+    line-height: 2em;
+    text-align: center;
+    background: linear-gradient(to right, rgb(231, 231, 140), rgb(97, 165, 210), rgb(220, 103, 103));
+    margin-bottom: 10em;
+    color: #fff;
+    font-size: 1.5em;
+    font-family: "Abril Fatface", serif;
+}
+
+.introduction h2 {
+    padding: 1.5em;
+    font-size: 2em;
+}
+
+.contacts {
+    display: flex;
+    margin-top: 10em;
+    margin-bottom: 15em;
+}
+
+.informationcontact {
+    width: 30em;
+    height: 30em;
+    background-color: rgb(97, 165, 210);
+    text-align: end;
+    padding-top: 10em;
+    padding-right: 6em;
+    line-height: 4em;
+    font-size: 1.2em;
+}
+
+.informationcontact span {
+    position: relative;
+    color: #fff;
+}
+
+.formulaire {
+    padding-left: 5em;
+    padding-top: 5em;
+    width: 30em;
+    outline: rgb(97, 165, 210);
+}
+
+.formulaire input {
+    width: 20em;
+    margin-bottom: 2em;
+    padding-right: 2em;
+    margin-top: 2em;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+.formulaire textarea {
+    width: 30em;
+    height: 10em;
+    margin-right: 2em;
+    padding: 1.5em;
+}
+
+#button {
+    background-color: rgb(97, 165, 210);
+    border-color: rgb(97, 165, 210);
+    border-radius: 0.5em;
+    transition: 1s;
+
+}
+
+.formulaire input:focus {
+    border: 0.2em solid rgb(97, 165, 210);
+    outline: none;
+}
+
+.formulaire textarea:focus {
+    border: 0.2em solid rgb(97, 165, 210);
+    outline: none;
+    border-radius: 0.5em;
+}
+
+#button:hover {
+    transform: scaleX(1.1);
+}
+
+
+@media screen and(max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero img {
+        width: 100%;
+    }
+
+    .carte {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav li a {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .menu nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
