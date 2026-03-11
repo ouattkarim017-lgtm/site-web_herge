@@ -124,6 +124,7 @@ footer {
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
     padding-bottom: 2em;
+    overflow: hidden;
 
 }
 
@@ -272,15 +273,15 @@ footer {
 
 
 .personnage {
-    padding: 5em;
+    text-align: center;
     margin-top: 4em;
-    margin-bottom: 3em;
+    margin-bottom: 5em;
     font-size: 1.3em;
     font-family: "Abril Fatface", serif;
     font-style: italic;
     line-height: 2em;
     background: linear-gradient(to right, rgb(97, 165, 210), rgb(216, 213, 213), rgb(97, 165, 210));
-    height: 9em;
+    height: 12em;
 }
 
 
@@ -307,11 +308,12 @@ footer {
 }
 
 .informationcontact {
-    width: 30em;
-    height: 30em;
+    width: 50%;
+    height: 50%;
     background-color: rgb(97, 165, 210);
     text-align: end;
-    padding-top: 10em;
+    align-items: center;
+    padding-top: 12em;
     padding-right: 6em;
     line-height: 4em;
     font-size: 1.2em;
@@ -370,9 +372,22 @@ footer {
 
 
 @media screen and(max-width: 768px) {
+    *{
+       font-size: 18px;
+    }
     header {
         flex-direction: column;
         height: auto;
+    }
+
+    nav li a {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .menu nav ul {
+        flex-direction: column;
+        gap: 10px;
     }
 
     .hero {
@@ -386,22 +401,28 @@ footer {
 
     .carte {
         grid-template-columns: 1fr;
-        flex-direction: column;
-    }
-
-    nav li a {
-        font-size: 12px;
-        padding: 10px;
-    }
-
-    .menu nav ul {
-        flex-direction: column;
-        gap: 10px;
+        flex-wrap: wrap;
+        flex-direction: row;
     }
     .contenu_pricipale{
         grid-template-columns: 1fr;
         font-size: 18px;
         line-height: 30px;
     }
+.personnage{
+    line-height: 30px;
+    margin-bottom: 6em;
+    height: auto;
+}
+.contacts{
+    grid-template-columns: 1fr;
+    margin-bottom: 30em;
+}
+.informationcontact{
+    line-height: 30px;
+}
 
+footer{
+    width: 100%;
+}
 }
