@@ -53,7 +53,9 @@ header {
 /* le debut du main  */
 
 .main {
-    margin-bottom: 60em;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
 }
 
 .titre h1 {
@@ -80,7 +82,6 @@ header {
 }
 
 .contenu_pricipale {
-    height: 15em;
     padding: 2.1em;
     font-size: 22px;
     line-height: 40px;
@@ -120,9 +121,9 @@ header {
 footer {
     background-color: black;
     color: white;
-    height: 25em;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
+    padding-bottom: 2em;
 
 }
 
@@ -223,13 +224,14 @@ footer {
 /* la page des oeuvrages */
 .carte {
     display: grid;
-    grid-template-columns: 25em 25em 25em;
-    grid-template-rows: 33em 33em;
-    margin-left: 1em;
-    margin-right: 1em;
+    grid-template-columns: 25em 25em ;
+    grid-template-rows: 33em 33em 33em;
+    margin-left: 10%;
+    padding: 20px;
+    gap: 20px;
 }
 
-.carte .piece {
+.carte .piece{
     margin: 1em;
     background-color: rgb(221, 235, 247);
     border-radius: 2em;
@@ -237,17 +239,20 @@ footer {
     border: 5px solid rgba(255, 255, 0, 0.619);
 }
 
-.piece img {
-    margin-left: 2em;
-    padding-top: 1em;
-    border-radius: 1em;
+.piece img{
+    width: 90%;
+    padding: 15px;
+    border-radius: 10px ;
     height: 20em;
-    width: 18em;
+    transition: 0.4s;
+}
+
+.piece img:hover{
+    transform: scale(1.05);
 }
 
 .piece:hover {
     box-shadow: 0px 10px 20px rgb(0, 0, 0, 0.2);
-    transform: scale(1.05);
 }
 
 .piece h3 {
@@ -372,15 +377,15 @@ footer {
 
     .hero {
         flex-direction: column;
+        justify-content: center;
     }
 
     .hero img {
-        width: 100%;
+        width: 90%;
     }
 
     .carte {
         grid-template-columns: 1fr;
-        display: flex;
         flex-direction: column;
     }
 
@@ -392,6 +397,11 @@ footer {
     .menu nav ul {
         flex-direction: column;
         gap: 10px;
+    }
+    .contenu_pricipale{
+        grid-template-columns: 1fr;
+        font-size: 18px;
+        line-height: 30px;
     }
 
 }
